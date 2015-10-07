@@ -1,0 +1,28 @@
+body{
+  background-image: url(https://d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2012/08/3_Pauline.jpg);
+  
+}
+
+.funct_main_1 {
+	height: 65px;
+	width: 175px;
+	margin: 7px 0px 7px 0px;
+  background-color: #DDDDDD;
+	transition: width 0.3s;
+}
+.funct_main_2 {
+	height: 65px;
+	width: 175px;
+	margin: 7px 0px 7px 0px;
+  background-color: #EEEEEE;
+	transition: width 0.3s;
+}
+
+.funct_main_1:hover, 
+.funct_main_2:hover {
+	width: 200px;
+}
+
+.function_main_1:active{
+  background-color: #88CCCC;
+}
