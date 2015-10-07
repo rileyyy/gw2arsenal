@@ -4,6 +4,11 @@ body{
   
 }
 
+ul
+{
+    list-style-type: none;
+}
+
 .sidebar_button_1{
    height: 65px;
    width: 175px;
@@ -29,6 +34,11 @@ body{
 .sidebar_button_1:active,
 .sidebar_button_2:active{
    background-color: #88CCCC;
+}
+
+.nav_active{
+   background-color: #99A8A8;
+   width: 200px;
 }
 
 .sidebar_para{
