@@ -1,9 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="homepage.css">
+		<link rel="stylesheet" type="text/css" href="css/homepage.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/homepage.js"></script>
 	</head>
 	<body>
 		<ul id="left_nav">
@@ -22,14 +23,4 @@
 			<li id="nav_9" style="clear: left;"></li>
 		</ul>
 	</body>
-
-	<script>
-		$(document).ready(function(){
-			$("#left_nav li").click(function(){
-				$("#left_nav li").removeClass('nav_active');
-    			$(this).addClass('nav_active');
-				//alert($(this).attr('id'));
-			})
-		});
-	</script>
 </html>
