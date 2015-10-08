@@ -1,0 +1,22 @@
+
+2015-10-08 - It Begins
+
+So this is it! Somehow I’ve been able to escape having a personal project for years. Between school, internships, and now the standard work week I haven’t had the energy to focus on any pet projects. I’m really excited to get this ball rolling, and what better way then to tackle this with a longtime friend. I don’t have a format in mind for these log posts. Some might be overly technical and others will be a brain dump of everything going on. I’d like to approach these as if I was talking into a recorder floating on the edges of space, with no hope of rescue (which is how I feel when dealing with CSS, Zing!).
+
+So let’s get into the meat of it, what are we even trying to accomplish? This is something that Riley and I have been bouncing around for awhile. Some of you might be familiar with Guild Wars 2 (GW2), but what I wasn’t aware of is that it has a fairly robust programming API. This project is a chance to build some tools for this game while branching out of our comfort zone to learn something new.
+
+
+The technology stack we are dealing with:
+
+1) LAMP backend - We originally threw around the idea of trying something new like node.js to handle our backend, but quickly realized how much of a nightmare it would be to coordinate our development environments. Like Mom’s meat loaf, we fell back to old faithful and set up a LAMP stack on our linux machine hosted through DigitalOcean. This made it easy to work locally using a XAMPP.
+
+2) JQuery vs. AngularJS - I need to come clean, as I haven’t been completely honest so far. I have about a years work of web dev experience and am already familiar with JQuery and its awesomeness. Due to the goal of learning something new we will probably swap over to AngularJS shortly. Astute readers of our git commits will notice some JQuery prototyping… I don’t know what you are talking about :p
+
+3) CSS vs <insert framework here> - I hate CSS, purely for how awful I am at understanding how it works. I love the idea of it with its wonderful overlapping style sheets and beautiful manipulation of element properties, but goddamn does it fight you every inch of the way. I’ve heard that some frameworks can alleviate that frustration, and for the sake of both of our sanities we may implement one if the layout gives us too much trouble.
+
+
+Let’s talk about the other dev for a few moments. I met Riley freshman year in college. With him being another Computer Engineer/Science major at a liberal arts university, it didn’t take long to realize we would be in every class together for the next 4 years. Besides being highly skilled, he isn’t too bad of a dude either. This worked out because between living together, going to class (*cough*cough*), and gaming I spent more time around him then my now wife. If you haven’t caught on yet, there is a definite bromance going on. After graduating we both stayed in the area and are working separately at our respective jobs, but I haven’t had the opportunity to program with him since school. 
+
+So let’s get on with it shall we? There will be frustration, tears, more frustration, and hopefully by the end we will have a website we are proud of!
+
+**********
