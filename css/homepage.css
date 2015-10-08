@@ -23,6 +23,10 @@ ul
   background-color: #DDDDDD;
   opacity: 0.75;
   transition: width 0.3s;
+
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
 }
 .sidebar_button_2{
   position: relative;
@@ -32,6 +36,10 @@ ul
   background-color: #EEEEEE;
   opacity: 0.75;
   transition: width 0.3s;
+  
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
 }
 
 .sidebar_button_1:hover, 
