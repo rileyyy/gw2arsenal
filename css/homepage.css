@@ -4,8 +4,7 @@ body{
   
 }
 
-ul
-{
+ul{
     list-style-type: none;
 }
 
@@ -41,6 +40,19 @@ ul
    width: 200px;
 }
 
-.sidebar_para{
+#nav_left{
+  float: left;
+  /*position: relative;*/
+}
 
+#content{
+  position: absolute;
+  /*top: 16px;*/
+  /*right: 150px;*/
+  margin-left: 300px;
+  margin-top: 50px;
+  height: 500px;
+  width: 950px;
+  background-color: #DDDDDD;
+  opacity: 0.75;
 }
