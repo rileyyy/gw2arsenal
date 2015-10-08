@@ -1,58 +1,79 @@
+@font-face /*Main Title Font*/
+{
+  font-family: gw2MainFont;
+  src: url(../font/gw2MainFont.ttf);
+}
 
 body{
   background-image: url(../img/background_init.jpg);
-  
 }
 
-ul{
-    list-style-type: none;
+ul
+{
+  margin-top:-7px;
+  margin-left:-45px;
+  list-style-type: none;
 }
 
 .sidebar_button_1{
-   height: 65px;
-   width: 175px;
-   margin: 7px 0px 7px 0px;
-   background-color: #DDDDDD;
-   opacity: 0.75;
-   transition: width 0.3s;
+  position: relative;
+  height: 55px;
+  width: 195px;
+  margin: 5px 0px 5px 0px;
+  background-color: #DDDDDD;
+  opacity: 0.75;
+  transition: width 0.3s;
 }
 .sidebar_button_2{
-   height: 65px;
-   width: 175px;
-   margin: 7px 0px 7px 0px;
-   background-color: #EEEEEE;
-   opacity: 0.75;
-   transition: width 0.3s;
+  position: relative;
+  height: 55px;
+  width: 195px;
+  margin: 5px 0px 5px 0px;
+  background-color: #EEEEEE;
+  opacity: 0.75;
+  transition: width 0.3s;
 }
 
 .sidebar_button_1:hover, 
 .sidebar_button_2:hover{
-   width: 200px;
+  background-color: #88CCCC;
+  width: 230px;
 }
 
 .sidebar_button_1:active,
 .sidebar_button_2:active{
-   background-color: #88CCCC;
+  background-color: #88CCCC;
 }
 
 .nav_active{
-   background-color: #99A8A8;
-   width: 200px;
+  background-color: #99A8A8;
+  width: 200px;
 }
 
 #nav_left{
   float: left;
-  /*position: relative;*/
 }
 
 #content{
   position: absolute;
-  /*top: 16px;*/
-  /*right: 150px;*/
-  margin-left: 300px;
-  margin-top: 50px;
-  height: 500px;
-  width: 950px;
+  margin-left: 250px;
+  /*margin-top: 25px;*/
+  height: 600px;
+  width: 1100px;
   background-color: #DDDDDD;
   opacity: 0.75;
+}
+
+.sidebar_text{
+  font-family: gw2MainFont;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 95%;
+  height: 30%;
+  margin: auto;
+
 }
