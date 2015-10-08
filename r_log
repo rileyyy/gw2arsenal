@@ -1,0 +1,42 @@
+Day 1:
+
+Everything sounds great when its only imaginative. kind of like my spelling. Prepare yourself for the ramblings of a possibly mad man. I supposed this should also recieve a NSFW denotation, as I swear more based on frustration, drunkeness, and because I damn well can. And since I dont know shit about website design really, there will be plenty of frustration to go around.  So you've been warned.
+
+today was the set up. there was nothing particularly exciting today other than sitting around drinking some beer (12proof rootbeer to be exact).  we bought the domain, honestly took less time than i imagined.  last time I tried to decide on a domain name, it was like digging through piles of shit, to find a ring.  This was surprisingly easier, and less smelly.  We settled on this, and its probably the best we'd find. gw2smithy was thrown around but that sounded cartoony. When i think gw2, i think of something that sounds powerful right? I mean its named Guild Wars for shit's sake. War! Its powerful and conflicting. Its demanding respect from lesser beings. War is mighty. Blizzard has WARcraft, Anet has Guild WARs, Lucas Arts has Star WARs.  They sound mighty and conquoring, not like Everquest or Rift. Whoopty-fucking-do are you playing a game about war? or are you playing a game about questing?  Don't get me wrong, Everquest did huge things for MMO's, but it sounds feeble. /rant
+
+Anyways, we bought some space on a hosting service.  Price wasn't bad, i guess.  The support and ease of it was great, really couldn't ask for much more.  I didn't really do much,  I let Mike set up most of the node schenanigans.  I had the drive, but was doing some local quality of life improvements. making a nice subst directory to make life easier when I am moving files around later.  Honesly I probably should have set it up better, since right now git wants to sync to my arbirtrary w-drive, instead of just having it sync into my xampp dir where I could run a local copy to test against. But fuck it, i'll probably try to get windows to clone the drive for me. And if that doesn't work then I'll just change my clone-to dir to my xampp dir.
+
+Speaking of git. I don't know shit about git. I have had a few projects at work that we wanted to run some sub-version control for. But corporate bullshit and laziness means that it didn't happen.  Always wanted to use git even, but tutorials don't teach for shit honestly.  So at least maybe now i'll learn.  If not, well, I'll get Mike to do all the pushing and pulling and tugging and wanking and whatever other synonyms are used.  I know commit so thats like 1/2 the battle right? 
+
+In other news... Didn't go to work today. Basically getting worked 3 weeks in a row, >9 hours a day with no breaks, 7 days a week.  I decided to use a sick day I wouldn't ever take.  Was a good break from work, and it relaly got me excited to take on this project.  It's been a while since I've gotten to code anything.
+
+Don't know what else really. so 
+/end
+
+
+Day 2:
+
+Didn't really do much today, had about an hour between shit.  Decided this would be a good time to do some housekeeping.  Downloaded GitHub's desktop program. It looks all clean, but I'm sure it'll go tits-up. Also set up an alias on the server.  Basically don't have any linux experience other than grepping log files and file manipulation.  So that's cool that now I can give the server keywords and have it change directories and/or run opperations with 1/4 of the work.  Also added the homepage files, so that we had something other than a picture of dickbutt in the repo.  Small milestones today, and I mean really small.
+
+/end
+
+
+Day 3: (Oct 7th/8th)
+
+Its actually been about a week since the first night, so progress has been slow to say the least.  Took J to work this morning, but don't have to work until 10pm.  Great, plenty of time to knock out some shit.  Progress is still slow.  HTML/CSS knowledge is basically knowing that I can do something, some how, but then spending 20 minutes googling the shit and fiddling with it, only to get it to a tollerable state.  Thankfully my good friends at Angry Orchard are keeping me happier.
+
+Got the homepage set up.  Gave it a background image, and some sexy nav-bars on the left. I've been typing and retyping the word div so many times today, it doesnt look like a word anymore.  Played jumprope with the css to get it to play nice. Decided I should look into a color-pallete too.  J is one of those art-majors, and damn decent too. She probably could have made a pallete in 2 seconds and would know all about layouts and shit.  But I'm more proud that I did it.  Decided the nav-bars should have subtle, alternating colors; it gives it decent depth.  Downloaded the Anet resource packs.  ~700mB for the HD version, and yet I didn't get much except their logo in like 6 formats.  Thanks guys.  Was hoping for some quality screenshots for the background, or the fonts they used. No such luck.  I feel like they just wanted to waste 3/4 of a gig on my ssd for shit and giggles. So deleted that.  Found some fonts online. Definitely not "recommended" or whatever the lawer approved terminology is.  But hey, free is my favorite color, and it makes the site feel a little more unified.  
+
+Git sucks. Yup, hate it so far.  Mid-afternoon by now, and i've spent most of an hour messaging Mike for help with this shit.  Like I guessed, the GitHub program was junk.  Downloaded SourceTree, as per Mike.  Too many damn buttons.  There's like 6 fucking commands for git. Why do I need to interact with 10,000,000 different things on my screen.  After wasting away trying to init SourceTree and failing, Mike got me okay with it.  Still not 100%, but at least I kind of understand git now.  Check out the branches, pull, do work, commit, merge, push.  Then just go to the linux-box and pull.  Probably should set up an alias to do that too. Too lazy to give it all the damn parameters for git pull.  Kinda sad that I cant be bothered to type what's probably 40-50 characters. 
+
+Left to do some personal shit. Let Mike play around with what I have so far. He liked it  (good -_-).  He did some mumbo-jumbo to make it a little more responsive towards javascript. He sorted out some files and cleaned up the dir's a little better too.  Also no more dickbutt :(
+
+LATER:
+
+At work now.  Quiet as shit, cept the intern asking me a million fucking questions.  I'm  not in the mood.  Made baller stir-fry, went shopping, dealt with a very real possibility I was going to be a dad in ~9 months (no thx).  So far that's a negative though, but we'll see for sure in the morning.  Also have the prospect of a new job.  Could be good. Hate this job and all the bullshit they fed me for me to take it.  New prospect is OOP based. Good. My favorite. Cept that I have an interview at 9:30am.  I get off at 7am.  Sounds like sleep won't happen tomorrow/today.
+
+On the brightside, got some more done.  Installed the first font, played with it a little.  Not sure if it'll stay as the main font, but its something GW2-ish. Played with the nav-bars/divs on the left for a solid 2 hours.  Text here, text there, center this, add font, redo everything because it was wrong once the font was updated.  I'm sure there is a more scalable way of doing this. But I've done little to no webdev before so, i'm happy its this decent.
+
+Been watching the secretary since she came in at 3am.  Hate her.  Don't hate many people, but she is lazy to the extreme, and bitchy to the max.  We cant even speak freely anymore because she'll lob anything we say at the boss and drag us down with her.  Its been quiet at work, but productivity has been low. Probably done for the day.
+
+/end
