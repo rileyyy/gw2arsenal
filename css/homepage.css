@@ -19,12 +19,12 @@ ul
   position: relative;
   height: 55px;
   width: 195px;
-  margin: 5px 0px 5px 0px;
+  margin: 0px 0px 0px 0px;
   background-color: #DDDDDD;
   opacity: 0.75;
-  transition: width 0.3s;
+  transition: width 0.3s, height 0.3s;
+  -webkit-transition: width 0.3s, height 0.3s; /* Safari */
 
-  font-weight: bold;
   cursor: pointer;
   text-align: center;
 }
@@ -32,12 +32,11 @@ ul
   position: relative;
   height: 55px;
   width: 195px;
-  margin: 5px 0px 5px 0px;
+  margin: 0px 0px 0px 0px;
   background-color: #EEEEEE;
   opacity: 0.75;
-  transition: width 0.3s;
-  
-  font-weight: bold;
+  -webkit-transition: width 0.3s, height 0.3s; /* Safari */
+
   cursor: pointer;
   text-align: center;
 }
@@ -46,11 +45,14 @@ ul
 .sidebar_button_2:hover{
   background-color: #88CCCC;
   width: 230px;
+  height: 75px;
+  font-weight: bold;
 }
 
 .sidebar_button_1:active,
 .sidebar_button_2:active{
   background-color: #88CCCC;
+  font-weight: bold;
 }
 
 .nav_active{
