@@ -69,10 +69,18 @@ ul
   position: absolute;
   margin-left: 250px;
   /*margin-top: 25px;*/
-  height: 600px;
+  min-height: 600px;
   width: 1100px;
   background-color: #DDDDDD;
   opacity: 0.75;
+}
+table.contained{
+  table-layout: fixed;
+  width: 1000px;
+}
+table.contained td {
+  word-wrap: break-word;
+  border-bottom:1pt solid black;
 }
 
 .sidebar_text{
