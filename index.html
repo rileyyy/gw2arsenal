@@ -2,22 +2,13 @@
 <html>
 	<head>
 		<title>GW2 Arsenal</title>
-      	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 		<link rel="stylesheet" type="text/css" href="css/homepage.css">
 		<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 		<script src="js/homepage.js"></script>
 	</head>
-	<body>
-
-<script>
-	var app = angular.module('myApp', []);
-		app.controller('customersCtrl', function($scope, $http) {
-    	$http.get("https://api.guildwars2.com/v1/colors.json")
-    	.success(function(response) {$scope.colors = response.colors;});
-	});
-</script>
+	<body ng-app="myApp">
 
 		<div id="nav_left">
 			<ul id="left_nav">
@@ -54,18 +45,26 @@
 				</li>
 			</ul>
 		</div>
-		<div id="content" ng-app="myApp" ng-controller="customersCtrl">
+
+		<!-- TODO -->
+		<!-- This is not working, but I think it is because the html is being generated before colors has any data -->
+		<!-- This will be fixed once we go through the services tutorial abd figure out how to wait for this data -->
+		<div id="content" ng-controller="MainController">
 			<table class="contained">
 				<tr ng-repeat="color in colors">
-					<td>{{color.name}}</td>
-                    <td>{{color.base_rgb}}</td>
-                    <td>{{color.cloth}}</td>
-                    <td>{{color.leather}}</td>
-                    <td>{{color.metal}}</td>
-                    <td>{{color.item}}</td>
-                    <td>{{color.categories}}</td>
+					<color-info info="color"></color-info>
 				</tr>
 			</table>
 		</div>
+
+		<!-- Modules -->
+	    <script src="js/app.js"></script>
+
+	    <!-- Controllers -->
+	    <script src="js/controllers/MainController.js"></script>
+
+	    <!-- Directives -->
+	    <script src="js/directives/colorInfo.js"></script>
+
 	</body>
 </html>
