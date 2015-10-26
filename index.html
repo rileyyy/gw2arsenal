@@ -8,13 +8,13 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 		<script src="js/homepage.js"></script>
 	</head>
-	<body ng-app="myApp">
+	<body ng-app="myApp" ng-controller="MainController">
 
 		<div id="nav_left">
 			<ul id="left_nav">
-				<li id="inventory_nav" class="sidebar_button_1">
+				<li id="color_nav" class="sidebar_button_1" ng-click="getColors()">
 					<!--  API get against account/bank & account/wallet -->
-					<div class="sidebar_text">Inventory</div>
+					<div class="sidebar_text">Colors</div>
 				</li>
 				<li id="characters_nav" class="sidebar_button_2">
 					<!-- API get against characters & specializations & traits -->
@@ -46,14 +46,20 @@
 			</ul>
 		</div>
 
-		<!-- TODO -->
-		<!-- This is not working, but I think it is because the html is being generated before colors has any data -->
-		<!-- This will be fixed once we go through the services tutorial abd figure out how to wait for this data -->
-		<div id="content" ng-controller="MainController">
+		<!-- This works, but I couldn't get it going with the custom directive -->
+		<div id="content">
 			<table class="contained">
-				<tr ng-repeat="color in colors">
-					<color-info info="color"></color-info>
-				</tr>
+				<tbody>
+					<tr ng-repeat="color in color_data">
+						<td>{{color.name}}</td>
+						<td>{{color.base_rgb}}</td>
+						<td>{{color.cloth}}</td>
+						<td>{{color.leather}}</td>
+						<td>{{color.metal}}</td>
+						<td>{{color.item}}</td>
+						<td>{{color.categories}}</td>
+					</tr>
+				</tbody>
 			</table>
 		</div>
 
@@ -65,6 +71,9 @@
 
 	    <!-- Directives -->
 	    <script src="js/directives/colorInfo.js"></script>
+
+	    <!-- Services -->
+  		<script src="js/services/colors.js"></script>
 
 	</body>
 </html>
