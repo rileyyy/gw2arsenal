@@ -2,13 +2,12 @@
 <html>
 	<head>
 		<title>GW2 Arsenal</title>
-		<link rel="stylesheet" type="text/css" href="css/homepage.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
 		<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-		<script src="js/homepage.js"></script>
+		<script src="js/index.js"></script>
 	</head>
-	<body ng-app="myApp" ng-controller="MainController">
+	<body>
 
 		<div id="nav_left">
 			<ul id="left_nav">
@@ -46,34 +45,11 @@
 			</ul>
 		</div>
 
-		<!-- This works, but I couldn't get it going with the custom directive -->
+
 		<div id="content">
-			<table class="contained">
-				<tbody>
-					<tr ng-repeat="color in color_data">
-						<td>{{color.name}}</td>
-						<td>{{color.base_rgb}}</td>
-						<td>{{color.cloth}}</td>
-						<td>{{color.leather}}</td>
-						<td>{{color.metal}}</td>
-						<td>{{color.item}}</td>
-						<td>{{color.categories}}</td>
-					</tr>
-				</tbody>
-			</table>
+			
 		</div>
 
-		<!-- Modules -->
-	    <script src="js/app.js"></script>
-
-	    <!-- Controllers -->
-	    <script src="js/controllers/MainController.js"></script>
-
-	    <!-- Directives -->
-	    <script src="js/directives/colorInfo.js"></script>
-
-	    <!-- Services -->
-  		<script src="js/services/colors.js"></script>
 
 	</body>
 </html>
