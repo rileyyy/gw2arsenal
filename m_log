@@ -1,4 +1,10 @@
 
+2015-10-28 - It Begins... Again!
+
+There have been a few developments since the last update. First off after going through multiple AngularJS tutorials the lack of knowledge of how it was working behind the scenes became unwieldy. I knew how to implement the solution to the problem in JQuery, but the last thing I wanted was to mix the two systems into some sort of Frankenstein monster. So... in the interest of actually working towards building a functional product the team decided to scratch all AngularJS and start over using JQuery. What will this mean? We will be writing a lot more code to accomplish the same tasks, it will not be clean, and it may be difficult to modify later. However the benefits include: faster development time and familiarity with JQuery. We are trading form for function, and that is quite alright with me.
+
+**********
+
 2015-10-08 - It Begins
 
 So this is it! Somehow I’ve been able to escape having a personal project for years. Between school, internships, and now the standard work week I haven’t had the energy to focus on any pet projects. I’m really excited to get this ball rolling, and what better way then to tackle this with a longtime friend. I don’t have a format in mind for these log posts. Some might be overly technical and others will be a brain dump of everything going on. I’d like to approach these as if I was talking into a recorder floating on the edges of space, with no hope of rescue (which is how I feel when dealing with CSS, Zing!).
