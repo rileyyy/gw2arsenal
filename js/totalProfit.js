@@ -34,6 +34,7 @@ function get_total_bought(api_key){
 			type: 'GET',
 			dataType: 'json',
 			async: false,
+			cache: false,
 			success: function(data, textStatus, request) {
 
 				//Get the total number of pages in this request
@@ -65,6 +66,7 @@ function get_total_sold(api_key){
 			type: 'GET',
 			dataType: 'json',
 			async: false,
+			cache: false,
 			success: function(data, textStatus, request) {
 
 				//Get the total number of pages in this request
