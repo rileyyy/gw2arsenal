@@ -35,6 +35,10 @@ function setup(){
 		},
 	});
 
+	$("#net_gains_nav").click(function(){
+		window.location.replace("totalProfit.html");
+	});
+
 }
 
 function loadSellHistory(data){

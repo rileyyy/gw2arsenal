@@ -8,13 +8,40 @@
 	</head>
 	<body>
 
-		API key: <input type="text" id="api_key" name="api_key" size="100"><br>
-		<button type="button" onclick="get_total_profit()">Total Profit</button><br>
+		API key: <input type="text" id="api_key" name="api_key" size="100"><br><br>
+		<button type="button" id="get_net">Total Profit</button><button type="button" id="mike_easy">Mike's easy button</button><br>
 
 
 		<div id="content">
 			
 		</div>
+
+				<br><br><br>
+		<pre>
+*********************TODO*********************
+Compare only what you've bought within the trading post, and what you sold:
+
+Assumptions, since you normally buy in bulk the bought array will have less items then the sold array. Example, buying 250 totems will only have 1 entry in the bought array, while it could have 50 in the sold array depending how you listed them in the trading post.
+
+Algorithm:
+
+0) sort both arrays by item_id
+1) For the current item_id, make sure it appears in both arrays, otherwise skip it.
+2)Get all occurrences of an item (in the loop, keep going until an ID changes) in the bought array.
+2) Get all occurrences of an item in the sold array
+3) total up the total amount spent vs the amount gained per item
+4) total up all items for net value
+5) get item names per grouping (separate API call)
+5) Plot all data in a nice table, highlight losses in red, gains in green.
+
+Potential resources:
+http://stackoverflow.com/questions/17856846/comparing-two-arrays-in-jquery
+http://stackoverflow.com/questions/4869292/remove-itemi-from-jquery-each-loop
+
+Bonus:
+Figure out how to do this asynchronously. Notice how the browser freezes up when buttons are clicked now? That is not desired.
+		</pre>
+
 
 
 	</body>
