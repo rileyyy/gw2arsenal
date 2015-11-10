@@ -21,6 +21,49 @@ function setup(){
 		loadColors();
 	});
 
+	//Test, show my trading post transaction history
+	$.ajax({
+		url: 'https://api.guildwars2.com/v2/commerce/transactions/history/sells?access_token=8EF967B5-4FB9-E64C-B919-0D5025804FDDE7B2AF39-EFAB-4878-A6BD-540F23066899',
+		type: 'GET',
+		dataType: 'json',
+		success: function(data) { 
+			console.log(data);
+			loadSellHistory(data);
+		},
+		error: function(data) { 
+			alert('boo!'); 
+		},
+	});
+
+}
+
+function loadSellHistory(data){
+	//Build table out of returned json;
+		var generated_html = '<table class="contained">';
+		generated_html += '<th>TransactionID</th>'+
+						  '<th>ItemID</th>' + 
+						  '<th>Price</th>' +
+						  '<th>Quantity</th>'+
+						  '<th>Created</th>'+
+						  '<th>Purchased</th>';
+
+		$.each(data, function(index, trans) { 
+			generated_html += '<tr>';
+
+				generated_html += '<td>' + trans.id + '</td>';
+				generated_html += '<td>' + trans.item_id + '</td>';
+				generated_html += '<td>' + trans.price + '</td>';
+				generated_html += '<td>' + trans.quantity + '</td>';
+				generated_html += '<td>' + trans.created + '</td>';
+				generated_html += '<td>' + trans.purchased + '</td>';
+
+			generated_html += '</tr>';
+
+		});
+		generated_html += '</table>';
+
+		//Add generated content to div
+		$('#content').html(generated_html);
 }
 
 function loadColors(){
