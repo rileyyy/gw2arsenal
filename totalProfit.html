@@ -25,10 +25,10 @@ Assumptions, since you normally buy in bulk the bought array will have less item
 
 Algorithm:
 
-0) sort both arrays by item_id
+0) sort both arrays by item_id, then by date
 1) For the current item_id, make sure it appears in both arrays, otherwise skip it.
-2)Get all occurrences of an item (in the loop, keep going until an ID changes) in the bought array.
-2) Get all occurrences of an item in the sold array
+2) Get all occurrences of an item (in the loop, keep going until an ID changes) in the bought array.
+2) Get all occurrences of an item in the sold array, but only up until the max_bought is reached.
 3) total up the total amount spent vs the amount gained per item
 4) total up all items for net value
 5) get item names per grouping (separate API call)
