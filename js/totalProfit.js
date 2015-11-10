@@ -74,3 +74,12 @@ function get_total_sell(){
 		},
 	});
 }
+
+function convertToCoins(nStr){ 
+  nStr += '';
+
+  var rgx = /(\d+)(\d{2})(\d{2})/;
+  nStr = nStr.replace(rgx, '$1' + '.' + '$2' + '.' + '$3');
+
+  return nStr;
+}
