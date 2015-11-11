@@ -12,6 +12,14 @@ function setup(){
 		$('#content').html("<p>Total Bought: " + convertToCoins(total_bought) + "</p><p>Total Sold: " + convertToCoins(total_sold) + "</p><p>Net: " + convertToCoins(net_profit) + "</p>");
 	});
 
+	$("#riley_easy").click(function(){
+		var api_key = "8427E953-2908-8F47-A705-9DD18A9C01E274B2AEEA-206E-47A2-8BF0-543BFD1D7549";
+		var total_bought = get_total_bought(api_key);
+		var total_sold = get_total_sold(api_key);
+		var net_profit = total_sold - total_bought;
+		$('#content').html("<p>Total Bought: " + convertToCoins(total_bought) + "</p><p>Total Sold: " + convertToCoins(total_sold) + "</p><p>Net: " + convertToCoins(net_profit) + "</p>");
+	});
+
 	$("#get_net").click(function(){
 		var api_key = $("#api_key").val();
 		var total_bought = get_total_bought(api_key);
@@ -99,14 +107,16 @@ function convertToCoins(n){
 	nStr = n+'';
 	if(nStr.length <= 2){
 		var rgx = /(\d+)/;
-		nStr = nStr.replace(rgx, '$1' + 'c');
+		nStr = nStr.replace(rgx, '$1' + '<img href="img/copper_coin.png" height="20" width="20">');
 	}
 	else if(nStr.length >= 3 && nStr.length <= 4){
 		var rgx = /(\d+)(\d{2})/;
-		nStr = nStr.replace(rgx, '$1' + 's' + '$2'+'c');
+		nStr = nStr.replace(rgx, '$1' + '<img href="../img/silver_coin.png" height="20" width="20">' + '$2' + '<img href="img/copper_coin.png" height="20" width="20">');
 	}else{
 		var rgx = /(\d+)(\d{2})(\d{2})/;
-		nStr = nStr.replace(rgx, '$1' + 'g' + '$2' + 's' + '$3'+'c');
+		nStr = nStr.replace(rgx, '$1' + '<img href="../img/gold_coin.png" height="20" width="20">' + '$2' + '<img href=".../img/silver_coin.png" height="20" width="20">' + '$3'+ '<img href="img/copper_coin.png" height="20" width="20">');
+		console.log(nStr)
+
 	}
 
 	if(is_negative){
