@@ -36,6 +36,21 @@ function setup(){
 	  	});
 	});
 
+	$("#riley_easy").click(function(){
+		//Prevent any more ajax calls until this one finishes
+		$(":button").attr("disabled", true);
+		
+        var api_key = "8427E953-2908-8F47-A705-9DD18A9C01E274B2AEEA-206E-47A2-8BF0-543BFD1D7549";
+        get_total_bought(api_key, 0);
+		get_total_sold(api_key, 0);
+
+		$(document).ajaxStop(function () {
+	      post_process();
+	      $(this).unbind("ajaxStop");
+	  	});
+    });
+
+
 }
 
 function post_process(){
