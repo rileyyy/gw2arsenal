@@ -5,8 +5,10 @@ $(document).ready(function(){
 function setup(){
 
 	//Global variables
-	window.total_sold = 0;
-	window.total_bought = 0;
+	window.total_sold_gross = 0;
+	window.total_sold_objects = [];
+	window.total_bought_gross = 0;
+	window.total_bought_objects = [];
 
 	$("#mike_easy").click(function(){
 		//Prevent any more ajax calls until this one finishes
@@ -55,12 +57,14 @@ function setup(){
 
 function post_process(){
 
-	var net_profit = total_sold - total_bought;
-	$('#content').html("<p>Total Bought: " + convertToCoins(total_bought) + "</p><p>Total Sold: " + convertToCoins(total_sold) + "</p><p>Net: " + convertToCoins(net_profit) + "</p>");
+	var net_profit = total_sold_gross - total_bought_gross;
+	$('#content').html("<p>Total Bought: " + convertToCoins(total_bought_gross) + "</p><p>Total Sold: " + convertToCoins(total_sold_gross) + "</p><p>Net: " + convertToCoins(net_profit) + "</p>");
 
 	//Reset global variables before next query
-	window.total_sold = 0;
-	window.total_bought = 0;
+	window.total_sold_gross = 0;
+	window.total_sold_objects = [];
+	window.total_bought_gross = 0;
+	window.total_bought_objects = [];
 
 	$(":button").attr("disabled", false);
 }
@@ -87,8 +91,8 @@ function get_total_bought(api_key, page){
 			}
 
 			$.each(data, function(key, val) {
-					update_total_bought(val.price);
-				});
+				update_total_bought(val);
+			});
 
 		},
 		error: function(data) { 
@@ -120,7 +124,7 @@ function get_total_sold(api_key, page){
 
 
 			$.each(data, function(key, val) {
-				total_sold += val.price;
+				update_total_sold(val);
 			});
 
 		
@@ -132,8 +136,20 @@ function get_total_sold(api_key, page){
 	});
 }
 
-function update_total_bought(n){
-	total_bought += n;
+function update_total_bought(obj){
+
+	//Keep a running tally of total amount bought
+	total_bought_gross += obj.price;
+
+	//Add json object to array
+}
+
+function update_total_sold(obj){
+
+	//Keep a running tally of total amount bought
+	total_sold_gross += obj.price;
+
+	//Add json object to array
 }
 
 function convertToCoins(n){ 
