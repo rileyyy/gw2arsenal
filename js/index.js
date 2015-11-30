@@ -87,13 +87,46 @@ function loadColors(){
 		$.each(data.colors, function(index, color) { 
 			generated_html += '<tr>';
 
-				generated_html += '<td>' + color.name + '</td>';
-				generated_html += '<td>' + color.item + '</td>';
-				generated_html += '<td>' + JSON.stringify(color.base_rgb) + '</td>';
-				generated_html += '<td>' + JSON.stringify(color.categories) + '</td>';
-				generated_html += '<td>' + JSON.stringify(color.cloth) + '</td>';
-				generated_html += '<td>' + JSON.stringify(color.leather) + '</td>';
-				generated_html += '<td>' + JSON.stringify(color.metal) + '</td>';
+				//generated_html += '<td>' + color.name + '</td>';
+				//generated_html += '<td>' + color.item + '</td>';
+				//generated_html += '<td>' + JSON.stringify(color.base_rgb) + '</td>';
+				//generated_html += '<td>' + JSON.stringify(color.categories) + '</td>';
+				//generated_html += '<td>' + JSON.stringify(color.cloth) + '</td>';
+				//generated_html += '<td>' + JSON.stringify(color.leather) + '</td>';
+				//generated_html += '<td>' + JSON.stringify(color.metal) + '</td>';
+
+				var colorName = color.name;
+				var colorItem = color.item;
+				var colorRGB  = JSON.stringify(color.base_rgb);
+					 colorRGB  = colorRGB.replace("[", "(");
+					 colorRGB  = colorRGB.replace("]", ")");
+				var colorCat  = JSON.stringify(color.categories);
+					 colorCat  = colorCat.replace("[", "");
+					 colorCat  = colorCat.replace("]", "");
+					 colorCat  = colorCat.replace(/,/g, "\n");
+				var colorClth = JSON.stringify(color.cloth);
+					 colorClth = colorClth.replace("{", "");
+					 colorClth = colorClth.replace("}", "");
+					 colorClth = colorClth.replace(/"/g, "");
+					 colorClth = colorClth.replace(/,/g, "\n");
+				var colorLthr = JSON.stringify(color.leather);
+					 colorLthr = colorLthr.replace("{", "");
+					 colorLthr = colorLthr.replace("}", "");
+					 colorLthr = colorLthr.replace(/"/g, "");
+					 colorLthr = colorLthr.replace(/,/g, "\n");
+				var colorMetl = JSON.stringify(color.metal);
+					 colorMetl = colorMetl.replace("{", "");
+					 colorMetl = colorMetl.replace("}", "");
+					 colorMetl = colorMetl.replace(/"/g, "");
+					 colorMetl = colorMetl.replace(/,/g, "\n");
+
+				generated_html += '<td>' + colorName + '</td>';
+				generated_html += '<td>' + colorItem + '</td>';
+				generated_html += '<td> <p style="background-color:rgb' + colorRGB + '">' + colorRGB + '</p></td>';
+				generated_html += '<td>' + colorCat + '</td>';
+				generated_html += '<td>' + colorClth + '</td>';
+				generated_html += '<td>' + colorLthr + '</td>';
+				generated_html += '<td>' + colorMetl + '</td>';
 
 			generated_html += '</tr>';
 

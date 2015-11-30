@@ -28,6 +28,7 @@ ul
   cursor: pointer;
   text-align: center;
 }
+
 .sidebar_button_2{
   position: relative;
   height: 55px;
@@ -94,5 +95,4 @@ table.contained td {
   width: 95%;
   height: 30%;
   margin: auto;
-
 }
