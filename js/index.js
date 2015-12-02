@@ -21,20 +21,6 @@ function setup(){
 		loadColors();
 	});
 
-	//Test, show my trading post transaction history
-	$.ajax({
-		url: 'https://api.guildwars2.com/v2/commerce/transactions/history/sells?access_token=8EF967B5-4FB9-E64C-B919-0D5025804FDDE7B2AF39-EFAB-4878-A6BD-540F23066899',
-		type: 'GET',
-		dataType: 'json',
-		success: function(data) { 
-			console.log(data);
-			loadSellHistory(data);
-		},
-		error: function(data) { 
-			alert('boo!'); 
-		},
-	});
-
 	$("#net_gains_nav").click(function(){
 		window.location.replace("totalProfit.html");
 	});
@@ -87,46 +73,38 @@ function loadColors(){
 		$.each(data.colors, function(index, color) { 
 			generated_html += '<tr>';
 
-				//generated_html += '<td>' + color.name + '</td>';
-				//generated_html += '<td>' + color.item + '</td>';
-				//generated_html += '<td>' + JSON.stringify(color.base_rgb) + '</td>';
-				//generated_html += '<td>' + JSON.stringify(color.categories) + '</td>';
-				//generated_html += '<td>' + JSON.stringify(color.cloth) + '</td>';
-				//generated_html += '<td>' + JSON.stringify(color.leather) + '</td>';
-				//generated_html += '<td>' + JSON.stringify(color.metal) + '</td>';
+				//Don't need to string parse the data. The cool thing about json data is you can gather exactly the information you need
+				//by calling on the "key". JSON is just a key-value pair, so if you know the key, you can get the value.
+				//Check out the difference bellow on gathering the information you care about.
+
+				//Some more information, JSON stands for JavaScript Object Notation, so the purpose of JSON is to serialize a javascript object into a string.
+				//What are the benefits of this? Well if you encode your object as a json string, you can send that data over the internet and decode it on the other end.
+				//The user (us), decodes that json data back into the javascript object, which we can now use below!
+				//JSON is cross language, which is why it is a great medium of transfer from Java, to C, to C#, to Perl... It is a lightweight alternative to XML
 
 				var colorName = color.name;
 				var colorItem = color.item;
-				var colorRGB  = JSON.stringify(color.base_rgb);
-					 colorRGB  = colorRGB.replace("[", "(");
-					 colorRGB  = colorRGB.replace("]", ")");
-				var colorCat  = JSON.stringify(color.categories);
-					 colorCat  = colorCat.replace("[", "");
-					 colorCat  = colorCat.replace("]", "");
-					 colorCat  = colorCat.replace(/,/g, "\n");
-				var colorClth = JSON.stringify(color.cloth);
-					 colorClth = colorClth.replace("{", "");
-					 colorClth = colorClth.replace("}", "");
-					 colorClth = colorClth.replace(/"/g, "");
-					 colorClth = colorClth.replace(/,/g, "\n");
-				var colorLthr = JSON.stringify(color.leather);
-					 colorLthr = colorLthr.replace("{", "");
-					 colorLthr = colorLthr.replace("}", "");
-					 colorLthr = colorLthr.replace(/"/g, "");
-					 colorLthr = colorLthr.replace(/,/g, "\n");
-				var colorMetl = JSON.stringify(color.metal);
-					 colorMetl = colorMetl.replace("{", "");
-					 colorMetl = colorMetl.replace("}", "");
-					 colorMetl = colorMetl.replace(/"/g, "");
-					 colorMetl = colorMetl.replace(/,/g, "\n");
+
+				var baseColorRGB = color.base_rgb.toString(); //color.base.rgb is an array with 3 values [R,G,B]. Calling toString() handles all that string stripping you were doing earlier.
+
+				var colorCat  = color.categories;
+
+				var colorClthData = JSON.stringify(color.cloth); //This information is useless, purely to display right now
+				var colorClthRGB = color.cloth.rgb.toString();
+
+				var colorLthrData = JSON.stringify(color.leather); //This information is useless, purely to display right now
+				var colorLthrRGB = color.leather.rgb.toString();
+
+				var colorMetlData = JSON.stringify(color.metal); //This information is useless, purely to display right now
+				var colorMetlRGB = color.metal.rgb.toString();
 
 				generated_html += '<td>' + colorName + '</td>';
 				generated_html += '<td>' + colorItem + '</td>';
-				generated_html += '<td> <p style="background-color:rgb' + colorRGB + '">' + colorRGB + '</p></td>';
+				generated_html += '<td> <p style="background-color:rgb(' + baseColorRGB + ')">' + baseColorRGB + '</p></td>';
 				generated_html += '<td>' + colorCat + '</td>';
-				generated_html += '<td>' + colorClth + '</td>';
-				generated_html += '<td>' + colorLthr + '</td>';
-				generated_html += '<td>' + colorMetl + '</td>';
+				generated_html += '<td> <p style="background-color:rgb(' + colorClthRGB + ')">' + colorClthData + '</p></td>';
+				generated_html += '<td> <p style="background-color:rgb(' + colorLthrRGB + ')">' + colorLthrData + '</p></td>';
+				generated_html += '<td> <p style="background-color:rgb(' + colorMetlRGB + ')">' + colorMetlData + '</p></td>';
 
 			generated_html += '</tr>';
 
